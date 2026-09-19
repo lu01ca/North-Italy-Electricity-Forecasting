@@ -39,6 +39,8 @@ Source: [Terna](https://www.terna.it/) (Italian transmission system operator).
 
 The series shows **stable variance** and **no deterministic trend**, but is **non-stationary in mean** because of multiple seasonalities:
 
+![Hourly electricity consumption over the years 2021-2025.](figures/APP_1.png)
+
 - **Annual** — lower consumption in holiday/vacation months (December, August); high summer demand (air conditioning); winter above spring/autumn (heating, lighting).
 - **Weekly** — higher on weekdays, dropping over the weekend, lowest on Sunday.
 - **Daily** — peaks during daytime working hours, declines at night.
