@@ -151,7 +151,6 @@ The small coverage gap stems from the very small adaptation step `γ ≈ 3e-5` (
 
 ```text
 ├── thesis_application.ipynb  # Full pipeline: analysis → models → conformal prediction
-├── data/                     # Folder for the Terna dataset
 └── README.md
 
 
