@@ -39,23 +39,23 @@ Source: [Terna](https://www.terna.it/) (Italian transmission system operator).
 
 The series shows **stable variance** and **no deterministic trend**, but is **non-stationary in mean** because of multiple seasonalities:
 
-![Hourly electricity consumption over the years 2021-2025.](figures/APP_1.pdf)
+![Hourly electricity consumption over the years 2021-2025.](figures/APP_1.png)
 
 - **Annual** — lower consumption in holiday/vacation months (December, August); high summer demand (air conditioning); winter above spring/autumn (heating, lighting).
 - **Weekly** — higher on weekdays, dropping over the weekend, lowest on Sunday.
 - **Daily** — peaks during daytime working hours, declines at night.
 
-![[Left] Annual seasonality, [Middle] Weekly seasonality, [Right] Daily seasonality.](figures/APP_2.pdf)
+![[Left] Annual seasonality, [Middle] Weekly seasonality, [Right] Daily seasonality.](figures/APP_2.png)
 
 The **ACF** peaks every 24 h (daily) and every 168 h (weekly); the **PACF** shows strong dependence on the previous 24 hours and on lag 168.
 
-![ACF and PACF of the time series up to lag 336 (last two weeks).](figures/APP_3.pdf)
+![ACF and PACF of the time series up to lag 336 (last two weeks).](figures/APP_3.png)
 
 **Stationarity tests** (on the seasonally differenced series, lags 24 and 168): the **ADF** test rejects the unit root at all significance levels, and the **KPSS** test does not reject stationarity — the two agree that the differenced series is stationary.
 
 **Holidays** reduce demand below the working-day average; St. Ambrose (a Milan-only holiday) has no visible effect on the region, and the Immaculate Conception aligns with weekend levels.
 
-![Analysis of holidays.](figures/APP_4.pdf)
+![Analysis of holidays.](figures/APP_4.png)
 
 ---
 
@@ -121,11 +121,11 @@ Both show no overfitting (validation loss tracks training loss, stopped early at
 | LSTM | 660.21 | 3.31 | 3.46 |
 | **GRU** | **649.69** | **3.25** | **3.45** |
 
-![Hourly metrics of the LSTM and GRU on the test set.](figures/hourly_metrics_comparison.pdf)
+![Hourly metrics of the LSTM and GRU on the test set.](figures/hourly_metrics_comparison.png)
 
 Test performance is consistent with validation (no overfitting). The error **grows with the forecast horizon**, peaking around midday and easing towards midnight. The models capture ordinary days well but struggle on holidays and adjacent days, tending to **overestimate** demand; the gap shrinks when a holiday falls on a weekend.
 
-![Point forecasts of the LSTM and GRU over 2025.](figures/point_forecast.pdf)
+![Point forecasts of the LSTM and GRU over 2025.](figures/point_forecast.png)
 
 ---
 
@@ -141,7 +141,7 @@ Point forecasts are extended to **prediction intervals** using **AEnbMIMOCQR** (
 
 The small coverage gap stems from the very small adaptation step `γ ≈ 3e-5` (slow to react to structural change) and the limited number of test blocks (365). The point forecast occasionally falls outside the interval because point and bounds are estimated with **different loss functions** — the coverage guarantee concerns the observed value, not the external point forecast.
 
-![Interval forecasts of the GRU with AEnbMIMOCQR over 2025.](figures/cqr_forecast.pdf)
+![Interval forecasts of the GRU with AEnbMIMOCQR over 2025.](figures/cqr_forecast.png)
 
 **Behaviour of the intervals:** they widen where the model is most uncertain — around holidays and the day after (unless on a weekend), during the cluster of late-April/early-May holidays, on some Mondays (possibly bridge days), and during weekday working hours. Interestingly, the model "knows" these days are irregular and widens the band accordingly, even when the point forecast itself misses them.
 
