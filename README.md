@@ -134,3 +134,21 @@ The small coverage gap stems from the very small adaptation step `γ ≈ 3e-5` (
 ---
 
 ## Repository structure
+├── thesis_application.py # Full pipeline: analysis → models → conformal prediction
+├── data/ # Terna dataset
+└── README.md
+
+
+## How to run
+
+The pipeline was developed on Google Colab (GPU recommended for the DL models).
+
+```bash
+pip install pandas numpy scikit-learn statsmodels tensorflow matplotlib seaborn
+python thesis_application.py
+```
+
+## Author
+
+**Luca Iaria** — MSc in Statistics and Economics, University of Milano-Bicocca
+Supervisor: Prof. Matteo Pelagatti · Co-supervisor: Prof. Antonio Candelieri
