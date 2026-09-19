@@ -148,8 +148,10 @@ The small coverage gap stems from the very small adaptation step `γ ≈ 3e-5` (
 ---
 
 ## Repository structure
-├── thesis_application.py # Full pipeline: analysis → models → conformal prediction
-├── data/ # Terna dataset
+
+```text
+├── thesis_application.ipynb  # Full pipeline: analysis → models → conformal prediction
+├── data/                     # Folder for the Terna dataset
 └── README.md
 
 
@@ -166,3 +168,13 @@ python thesis_application.py
 
 **Luca Iaria** — MSc in Statistics and Economics, University of Milano-Bicocca
 Supervisor: Prof. Matteo Pelagatti · Co-supervisor: Prof. Antonio Candelieri
+
+---
+
+## Disclaimer
+
+- **Thesis Context:** This repository contains a synthesized version of the application chapter of my Master's thesis. If you are interested in reading the full dissertation, please feel free to reach out to me.
+- **Dataset:** The electricity demand data is the property of [Terna S.p.A.](https://www.terna.it/) and is publicly available through their official Download Center.
+- **Responsibility:** I assume full responsibility for any errors, omissions, or inaccuracies present in this code and documentation.
+
+---
