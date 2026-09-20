@@ -150,7 +150,7 @@ The small coverage gap stems from the very small adaptation step `γ ≈ 3e-5` (
 ## Repository structure
 
 ```text
-├── thesis_application.ipynb  # Full pipeline: analysis → models → conformal prediction
+├── thesis_application.py  # Full pipeline: analysis → models → conformal prediction
 └── README.md
 
 
