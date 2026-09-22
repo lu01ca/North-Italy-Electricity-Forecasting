@@ -55,7 +55,7 @@ The **ACF** peaks every 24 h (daily) and every 168 h (weekly); the **PACF** show
 
 **Holidays** reduce demand below the working-day average; St. Ambrose (a Milan-only holiday) has no visible effect on the region, and the Immaculate Conception aligns with weekend levels.
 
-![Analysis of holidays.](figures/APP_4.png)
+![Analysis of holidays.](figures/APP_4.png?v=2)
 
 ---
 
